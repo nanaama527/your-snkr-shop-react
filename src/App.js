@@ -5,6 +5,7 @@ import './App.css';
 import Brands from './Brands';
 import Sneakers from './Sneakers';
 import Header from './Header';
+import SneakerNew from './SneakerNew';
 
 
 function App() {
@@ -12,9 +13,11 @@ function App() {
     <Router>
       <Nav/>
       <Header/>
+      <SneakerNew />
       <div className="container">
         <Switch>
           {/* <Route exact path="/" component={ Home } /> */}
+          <Route exact path="/sneakers/new" component={SneakerNew} />
           <Route exact path="/sneakers" component={Sneakers} />
           <Route exact path="/brands" component={Brands} />
         </Switch>
