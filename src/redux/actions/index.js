@@ -12,3 +12,15 @@ export const fetchSneakers=()=>{
 
     }
 }
+
+
+export const deleteSneaker =(sneakerToDelete)=>{
+
+    return{
+
+        type: "DELETE_SNEAKER", payload: sneakerToDelete
+
+    }
+
+}
+
