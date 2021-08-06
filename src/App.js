@@ -6,6 +6,7 @@ import Brands from './Brands';
 import Sneakers from './Sneakers';
 import Header from './Header';
 import SneakerNew from './SneakerNew';
+import Challenge from './ChettChallenge';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <Router>
       <Nav/>
       <Header/>
-      <SneakerNew />
+        <Challenge/> 
       <div className="container">
         <Switch>
           {/* <Route exact path="/" component={ Home } /> */}

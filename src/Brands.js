@@ -29,7 +29,11 @@ const mapStateToProps =(state)=>{
 
 
 
-  export default connect(mapStateToProps)(Brands);
+
+
+
+
+export default connect(mapStateToProps)(Brands);
   
   
   

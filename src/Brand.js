@@ -1,6 +1,9 @@
 function Brand(props) {
-    return (<div> 
-         <h2>{props.brandProp.name}</h2>
+     
+     const n = () =>{console.log(props.brandProp.name)}
+     return (<div> 
+         <h2 onClick={n}>{props.brandProp.name}</h2>
+
     </div>);
 
   }

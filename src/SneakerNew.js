@@ -7,23 +7,19 @@ class SneakerNew extends Component{
 
     constructor(){ super();
         
-        this.state={ name: "", image: "", brand_id: "", brand_name: "" }
+        this.state={ name: "", image: "", brand_id: "" }
 
     }
     
 
-    submitHandler=(e)=>{ e.preventDefault() 
-    
-    
+    submitHandler=(e)=>{ e.preventDefault()
+
         console.log("Name:", this.state.name)
         console.log("image:", this.state.image)
-        console.log("brand_id:", this.state.brand_id)
-        console.log("brand_name:", this.state.brand_name)
-        
+        console.log("brand_id:", this.state.brand_id)  
         this.props.createNEWSneaker( this.state )
-        
-    
     }
+
     onChangeHandler=(e)=>{ 
 
         console.log(e.target.name, "  ::  ", e.target.value)    
@@ -37,34 +33,35 @@ class SneakerNew extends Component{
         <div>
             <h1>New Sneaker</h1>
             
-            {/* <form onSubmit={this.submitHandler}>
+            <form onSubmit={this.submitHandler}>
 
-                <input type="text" placeholder="Name" value={this.state.name} onChange={this.onChangeHandler}
+                <input type="text" placeholder="Name" 
+                    value={this.state.name} onChange={this.onChangeHandler}
                     name="name"
                 />
-                <input type="text" placeholder="image" value={this.state.image} onChange={this.onChangeHandler}
+                <input type="text" placeholder="image" 
+                    value={this.state.image} onChange={this.onChangeHandler}
                     name="image"
-                />
-                <input type="text" placeholder="Prefernce" value={this.state.prefernce} onChange={this.onChangeHandler}
-                    name="prefernce"
-                />                                
-                <input type="submit" value="Add New Sneaker!"/>
+                />                              
+                <input type="submit" 
+                    value="Add New Sneaker!"/>
             </form>
 
             <label for="brand">Choose a brand:</label>
 
-                <select name="brand_id" id="brand">
+                <select name="brand_id" id="brand" onChange={this.onChangeHandler}>
                     <option value="1">Nike-hypebeast</option>
                     <option value="2">Nike-Michigan</option>
                     <option value="3">Adidas</option>
                     <option value="4">Jordan</option>
                     <option value="5">New Balance</option>
                     <option value="6">Puma</option>
-                </select> */}
+                </select> 
         </div>
 
     </>);}
 
 }
-// export default connect(null, { createNEWSneaker })(SneakerNew);  
-export default SneakerNew
+
+
+export default connect(null, { createNEWSneaker })(SneakerNew);  

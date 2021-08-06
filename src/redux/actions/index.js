@@ -13,14 +13,58 @@ export const fetchSneakers=()=>{
     }
 }
 
+export const createNEWSneaker =(newSneaker)=>{
+    return (dispatch)=>{
 
-export const deleteSneaker =(sneakerToDelete)=>{
+        fetch("http://localhost:3000/sneakers", {
+                
+            method: "POST",
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify({
 
-    return{
-
-        type: "DELETE_SNEAKER", payload: sneakerToDelete
+                "name": newSneaker.name,
+                "image": newSneaker.image,
+                "brand_id": newSneaker.brand_id
+                    
+            })
+        
+         })
+        .then(resp => resp.json())
+        .then(newSneak => {  console.log(newSneak)  
+    
+            dispatch({ type: "ADD_SNEAKER", payload: newSneak })
+    
+        })
 
     }
+
+    
+
+}
+
+
+
+
+
+
+export const deleteSneaker =(sneakerToDelete)=>{
+    //return(dispatch)=>{
+        console.log(sneakerToDelete)
+        console.log(sneakerToDelete.id)
+        fetch(`http://localhost:3000/sneakers/${sneakerToDelete.id}`, {
+                    
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" }
+            
+        })
+        // .then(resp => resp.json())
+            // .then(newSneak => {  console.log(newSneak)  
+            return(dispatch)=>{
+                dispatch({ type: "DELETE_SNEAKER", payload: sneakerToDelete })
+            }
+        // })
+        
+    // }
 
 }
 
