@@ -3,6 +3,11 @@
 Welcome to your personal sneaker journal for keeping track of all the kicks you have, all the kicks you want, and even the kicks you thinking about. This app allows you to categorize your personal sneaker collection by name and brand so that you can keep track of your growing collection
 
 
+This application is associated with the following backend repo. find it here:
+
+[https://github.com/nanaama527/yss-backend-JS]
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
