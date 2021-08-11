@@ -13,6 +13,33 @@ export const fetchSneakers=()=>{
     }
 }
 
+
+
+export const fetchBrandSneakers=(brandId)=>{
+
+    return (dispatch)=>{
+
+        fetch(`http://localhost:3000/brands/${brandId}/sneakers`)
+        .then(resp => resp.json())
+        .then(brandSneakers => {  console.log(brandSneakers)  
+    
+            dispatch({ type: "FETCH_BRAND_SNEAKERS", payload: brandSneakers })
+    
+        })
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 export const createNEWSneaker =(newSneaker)=>{
     return (dispatch)=>{
 

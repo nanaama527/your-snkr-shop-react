@@ -6,8 +6,12 @@ export default (state = [], action)=> {
         case "FETCH_SNEAKERS":
             return [...action.payload]
 
+        case "FETCH_BRAND_SNEAKERS":
+            return [...action.payload]
+
+
         case "ADD_SNEAKER":
-        return [...state, action.payload]
+            return [...state, action.payload]
 
 
         case "DELETE_SNEAKER":

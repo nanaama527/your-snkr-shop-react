@@ -1,6 +1,6 @@
 function Header() {
     return (<div> 
-         <h2>Welcome to Your SNKR Collection</h2>
+         <h1 className="text-center">Welcome to Your SNKR Collection</h1>
     </div>);
 
   }

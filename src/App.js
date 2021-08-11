@@ -2,11 +2,11 @@ import logo from './logo.svg';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Nav from './Nav';
 import './App.css';
+import Home from './Home';
 import Brands from './Brands';
 import Sneakers from './Sneakers';
 import Header from './Header';
 import SneakerNew from './SneakerNew';
-import Challenge from './ChettChallenge';
 
 
 function App() {
@@ -14,10 +14,9 @@ function App() {
     <Router>
       <Nav/>
       <Header/>
-        <Challenge/> 
       <div className="container">
         <Switch>
-          {/* <Route exact path="/" component={ Home } /> */}
+          <Route exact path="/" component={Home} />
           <Route exact path="/sneakers/new" component={SneakerNew} />
           <Route exact path="/sneakers" component={Sneakers} />
           <Route exact path="/brands" component={Brands} />

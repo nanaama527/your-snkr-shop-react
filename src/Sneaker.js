@@ -11,6 +11,7 @@ function Sneaker(props) {
     return (<div> 
         <h4>{props.sneakerProp.name}</h4>
       <img src={props.sneakerProp.image} alt=""/>
+      <br></br>
       <button onClick={clickHandler}>Delete this</button>
 
     </div>);

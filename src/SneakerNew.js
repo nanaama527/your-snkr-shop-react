@@ -24,6 +24,7 @@ class SneakerNew extends Component{
 
         console.log(e.target.name, "  ::  ", e.target.value)    
         this.setState({ [e.target.name]: e.target.value })
+        
     }
     
     
@@ -31,24 +32,33 @@ class SneakerNew extends Component{
     render(){  
         return(<>
         <div>
-            <h1>New Sneaker</h1>
+            <h2 className="text-center">New Sneaker</h2>
             
             <form onSubmit={this.submitHandler}>
 
-                <input type="text" placeholder="Name" 
+                <input type="text-center" placeholder="Name" 
                     value={this.state.name} onChange={this.onChangeHandler}
                     name="name"
                 />
-                <input type="text" placeholder="image" 
+                
+                <br></br><br></br>
+                
+                <input type="text-center" placeholder="Image" 
                     value={this.state.image} onChange={this.onChangeHandler}
                     name="image"
                 />                              
+                
+                <br></br><br></br>
+                
                 <input type="submit" 
                     value="Add New Sneaker!"/>
             </form>
 
-            <label for="brand">Choose a brand:</label>
+            <br></br><br></br>
 
+
+                <label for="brand">Choose a brand:</label>
+                
                 <select name="brand_id" id="brand" onChange={this.onChangeHandler}>
                     <option value="1">Nike-hypebeast</option>
                     <option value="2">Nike-Michigan</option>
